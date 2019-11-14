@@ -18,8 +18,32 @@ html {
 
 html {
     font-family: Ubuntu, sans-serif;
-    font-size: 15px;
+    font-size: var(--sizing-fs-base);
     line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: var(--sizing-fs-tablet);
+    }
+}
+
+@media (min-width: 1260px) {
+    html {
+        font-size: var(--sizing-fs-laptop);
+    }
+}
+
+@media (min-width: 1420px) {
+    html {
+        font-size: var(--sizing-fs-desktop);
+    }
+}
+
+@media (min-width: 1660px) {
+    html {
+        font-size: var(--sizing-fs-huge);
+    }
 }
 
 p {
@@ -39,7 +63,7 @@ h6 {
 }
 
 h1 {
-    font-size: var(--sizing-h1);
+    font-size: 3em;
 }
 
 h2 {
@@ -47,7 +71,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--sizing-h3);
+    font-size: 1.9em;
 }
 
 h4 {
@@ -62,20 +86,34 @@ h6 {
     font-size: 1.2em;
 }
 
-p {
-    font-size: var(--sizing-p);
-}
-
 body {
-    width: 40vw;
-    margin: 0 auto;
-    padding-top: 2rem;
+    width: 60vw;
+    margin: 2rem auto;
+    border: 2px solid var(--font-color-alternative);
+    border-radius: 0.3em;
+    padding: 3rem;
 }
 
-h3 {
-    font-style: italic;
+ul {
+    display: flex;
+    justify-content: space-between;
 }
 
-h1 {
-    text-align: center;
+li {
+    width: 28%;
+    list-style: none;
+    color: var(--font-color-primary);
+}
+
+a {
+    padding: 0.6rem 0.8rem;
+    color: var(--font-color-white);
+    background: var(--font-color-alternative);
+    border-radius: 0.3em;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--font-color-alternative);
+    background: var(--font-color-primary);
 }

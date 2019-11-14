@@ -7,7 +7,8 @@
     --sizing-fs-desktop: 18px;
     --sizing-fs-huge: 20px;
 
-    --sizing-h1: 30px;
-    --sizing-h3: 20px;
-    --sizing-p: 16px;
+    --font-color-primary: #275468;
+    --font-color-alternative: #FFC701;
+    --font-color-white: #ffffff;
+
 }
