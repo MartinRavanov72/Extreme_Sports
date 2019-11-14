@@ -1,6 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
 @import url("../css/variables.css");
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 
 html {
     box-sizing: border-box;
@@ -17,7 +17,7 @@ html {
 }
 
 html {
-    font-family: Ubuntu, sans-serif;
+    font-family: var(--font-ptsans), sans-serif;
     font-size: var(--sizing-fs-base);
     line-height: 1.5;
 }
@@ -56,7 +56,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Abril Fatface, serif;
+    font-family: var(--font-ptserif), serif;
     line-height: 1.1;
     margin: 0 0 calc(var(--sizing-ws-base) / 3) 0;
     padding: 0;
@@ -87,33 +87,10 @@ h6 {
 }
 
 body {
-    width: 60vw;
+    width: 80vw;
     margin: 2rem auto;
-    border: 2px solid var(--font-color-alternative);
-    border-radius: 0.3em;
-    padding: 3rem;
 }
 
-ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-li {
-    width: 28%;
-    list-style: none;
-    color: var(--font-color-primary);
-}
-
-a {
-    padding: 0.6rem 0.8rem;
-    color: var(--font-color-white);
-    background: var(--font-color-alternative);
-    border-radius: 0.3em;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--font-color-alternative);
-    background: var(--font-color-primary);
+header {
+    text-align: center;
 }

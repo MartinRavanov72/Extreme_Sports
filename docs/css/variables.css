@@ -7,8 +7,7 @@
     --sizing-fs-desktop: 18px;
     --sizing-fs-huge: 20px;
 
-    --font-color-primary: #275468;
-    --font-color-alternative: #FFC701;
-    --font-color-white: #ffffff;
+    --font-ptsans: PT Sans;
+    --font-ptserif: PT Serif;
 
 }
