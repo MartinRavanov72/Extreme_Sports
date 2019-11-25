@@ -1,8 +1,13 @@
-body {
-    width: 80vw;
-    margin: 2rem auto;
+.site-header {
+    @include bp(mobile) {}
+
+    @include bp(desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-ul {
-    padding-left: 3rem;
+input:checked+.card .button .less {
+    display: inline;
 }

@@ -12,10 +12,17 @@
     </script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 
-    <title>{{ site.title }}</title>
+    <title>
+        {% if page.title != 'Home' %}
+        {{ page.title }} | {{ site.title }}
+        {% else %}
+        {{ site.title }}
+        {% endif %}
+    </title>
 </head>
 
 <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="site">
         <header class="site-header">
             <div class="site-branding">

@@ -2,6 +2,8 @@
 
 let gulp = require("gulp"),
   autoprefixer = require("gulp-autoprefixer"),
+  csso = require("gulp-csso"),
+  size = require("gulp-size"),
   browserSync = require("browser-sync").create(),
   sass = require("gulp-sass"),
   cp = require("child_process");
@@ -9,8 +11,12 @@ let gulp = require("gulp"),
 gulp.task("sass", function() {
   return gulp
     .src("_scss/**/*.scss")
+    .pipe(size())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
+    .pipe(size())
+    .pipe(csso())
+    .pipe(size())
     .pipe(gulp.dest("./docs/css/"))
     .pipe(
       browserSync.stream({
