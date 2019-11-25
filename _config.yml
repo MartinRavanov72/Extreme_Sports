@@ -2,7 +2,8 @@ title: Extreme Sports
 email: m.ravanov@gmail.com
 destination: docs
 description: Site for extreme sports
-baseurl: "/Extreme_Sports" # the subpath of your site, e.g. /blog
+# baseurl: "/Extreme_Sports"
+baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Marf_72
 github_username: MartinRavanov72
@@ -19,14 +20,13 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
