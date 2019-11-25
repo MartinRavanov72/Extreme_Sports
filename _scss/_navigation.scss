@@ -1,0 +1,41 @@
+.site-nav {
+    text-align: right;
+    padding-top: 0.5em;
+
+    ul {
+        display: flex;
+
+        li {
+            display: block;
+            margin: 0 0.7em;
+            transform: translate(0, -5em);
+            opacity: 0;
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+
+            .loaded & {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.1s;
+                }
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        padding: 0.5em 1em;
+        background: #dddddd;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .current-page a,
+    a:hover {
+        background: orange;
+        color: white;
+    }
+}
