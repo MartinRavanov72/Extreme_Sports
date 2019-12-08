@@ -28,6 +28,7 @@
 
     .contact-info {
         @include bp(mobile) {
+            padding-bottom: 1rem;
             margin-left: 3rem;
         }
     }
@@ -83,7 +84,12 @@
 
     .map-responsive {
         position: relative;
-        padding-bottom: 56.25%; // This is the aspect ratio
+
+        @include bp(mobile) {
+            padding-bottom: 60%;
+        }
+
+        padding-bottom: 30%;
         height: 0;
         overflow: hidden;
     }
