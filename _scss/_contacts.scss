@@ -1,0 +1,85 @@
+.contacts {
+    h2 {
+        text-align: center;
+    }
+
+    color: var(--text-color);
+    background: var(--background-color);
+
+    .container {
+        padding: 4rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+
+        .map-responsive {
+            margin-right: 2rem;
+            flex: 0 1 40%;
+            z-index: 1;
+            padding-right: 2rem;
+        }
+    }
+
+    .contact-form {
+        .feedback-input {
+            color: var(--text-color);
+            font-family: var(--font-ptsans);
+            font-size: 1rem;
+            border-radius: 0.3rem;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            outline: 0;
+        }
+
+        .feedback-input:focus {
+            border: 2px solid var(--secondary-color);
+        }
+
+        textarea {
+            color: var(--text-color);
+            font-family: var(--font-ptsans);
+            height: 8.4rem;
+            line-height: 150%;
+            resize: vertical;
+        }
+
+        [type="submit"] {
+            font-family: var(--font-ptsans);
+            width: 100%;
+            background: var(--primary-color);
+            border-radius: 0.3rem;
+            border: 0;
+            cursor: pointer;
+            color: white;
+            font-size: 1.3rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        [type="submit"]:hover {
+            background: var(--secondary-color);
+        }
+    }
+
+    .map-responsive {
+        position: relative;
+        padding-bottom: 56.25%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+
+    .map-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+}

@@ -8,7 +8,7 @@ let gulp = require("gulp"),
   sass = require("gulp-sass"),
   cp = require("child_process");
 
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   return gulp
     .src("_scss/**/*.scss")
     .pipe(size())
@@ -26,14 +26,14 @@ gulp.task("sass", function() {
 });
 
 // Jekyll
-gulp.task("jekyll", function() {
-  return cp.spawn("bundle", ["exec", "jekyll", "build"], {
+gulp.task("jekyll", function () {
+  return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''"], {
     stdio: "inherit",
     shell: true
   });
 });
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   browserSync.init({
     server: {
       baseDir: "./docs/"

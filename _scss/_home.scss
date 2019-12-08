@@ -1,0 +1,96 @@
+.home {
+    color: var(--text-color);
+    background: var(--background-color);
+
+    .page-header {
+        background: rgba(0, 0, 0, .2) url("../pics/main.jpg") no-repeat center;
+        background-blend-mode: darken;
+
+        height: 20rem;
+        background-size: cover;
+        max-width: 100%;
+
+        .content {
+            color: white;
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 11rem;
+        }
+    }
+
+    .sports {
+        position: relative;
+        top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96vw;
+        padding-bottom: 4rem;
+
+        .sport {
+
+            h2,
+            p {
+                text-align: center;
+            }
+
+
+            list-style: none;
+            flex: 1 1 20%;
+            margin: 0 4rem;
+
+            .img-container {
+                transition: transform;
+                transition-duration: 1s;
+                transition-timing-function: cubic-bezier(0.2, 0.3, 0, 1);
+                transition-delay: 0s;
+
+                margin: 0 auto;
+                background-position: center;
+                height: 20rem;
+                width: 20rem;
+                border-radius: 50%;
+                margin-bottom: 2rem;
+                margin-top: 2rem
+            }
+
+            .img-container:hover {
+                transform: scale(1.2);
+            }
+
+            .ski {
+                background: url("../pics/ski.jpg");
+                background-size: cover;
+            }
+
+            .bike {
+                background: url("../pics/bike.jpg");
+                background-size: cover;
+            }
+
+            .kite {
+                background: url("../pics/surfing.jpg");
+                background-size: cover;
+            }
+
+            .paraglide {
+                background: url("../pics/paragliding.jpg");
+                background-size: cover;
+            }
+
+            .bungee {
+                background: url("../pics/bungee.jpg");
+                background-size: cover;
+            }
+
+            .rafting {
+                background: url("../pics/rafting.jpg");
+                background-size: cover;
+            }
+
+        }
+    }
+}
