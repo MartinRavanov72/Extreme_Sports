@@ -2,8 +2,8 @@ title: Extreme Sports
 email: m.ravanov@gmail.com
 destination: docs
 description: Site for extreme sports
-# baseurl: "/Extreme_Sports"
-baseurl: ""
+baseurl: "/Extreme_Sports"
+# baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Marf_72
 github_username: MartinRavanov72
@@ -30,3 +30,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - theme-personal

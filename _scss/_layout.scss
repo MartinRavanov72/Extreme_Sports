@@ -8,6 +8,16 @@
     }
 }
 
+.site {
+    position: relative;
+    min-height: 100vh;
+}
+
+.site-main {
+    padding-bottom: 7rem;
+}
+
+
 input:checked+.card .button .less {
     display: inline;
 }
