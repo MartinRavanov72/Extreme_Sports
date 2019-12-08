@@ -33,6 +33,14 @@ gulp.task("jekyll", function () {
   });
 });
 
+// Jekyll
+gulp.task("jekyll deploy", function () {
+  return cp.spawn("bundle", ["exec", "jekyll", "build"], {
+    stdio: "inherit",
+    shell: true
+  });
+});
+
 gulp.task("watch", function () {
   browserSync.init({
     server: {
@@ -56,6 +64,6 @@ gulp.task("watch", function () {
   gulp.watch("docs/**/*.js").on("change", browserSync.reload);
 });
 
-gulp.task("deploy", gulp.series("jekyll", "sass"));
+gulp.task("deploy", gulp.series("jekyll deploy", "sass"));
 
 gulp.task("default", gulp.series("jekyll", "sass", "watch"));
