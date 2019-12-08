@@ -1,6 +1,4 @@
 .site-header {
-    @include bp(mobile) {}
-
     @include bp(desktop) {
         display: flex;
         justify-content: space-between;
@@ -11,6 +9,7 @@
 .site {
     position: relative;
     min-height: 100vh;
+    background: var(--background-color);
 }
 
 .site-main {

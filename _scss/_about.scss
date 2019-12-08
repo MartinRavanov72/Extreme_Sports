@@ -3,17 +3,22 @@
     margin: 0 auto;
 
     h2 {
-        padding: 2rem 0 1.3rem 0;
+        padding: 1.3rem 0;
         text-align: center;
     }
 
     .sports {
         .sport {
+            @include bp(tablet) {
+                display: block;
+            }
+
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 1rem;
-            ;
-            border: 1px solid red;
+            border: 2px solid rgb(156, 149, 149);
+            border-radius: 0.3rem;
 
             .sport-info {
                 flex: 1 1 70%;
@@ -34,7 +39,13 @@
             list-style: none;
             margin-bottom: 4rem;
 
+
+
             .img-container {
+                @include bp(tablet) {
+                    margin: 2rem auto;
+                }
+
                 transition: transform;
                 transition-duration: 1s;
                 transition-timing-function: cubic-bezier(0.2, 0.3, 0, 1);
@@ -44,6 +55,18 @@
                 height: 20rem;
                 width: 20rem;
                 margin: 2rem;
+            }
+
+            .left {
+                @include bp(tablet) {
+                    margin: 0 auto;
+                }
+            }
+
+            .right {
+                @include bp(tablet) {
+                    margin: 2rem auto;
+                }
             }
 
             .img-container:hover {

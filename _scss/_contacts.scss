@@ -7,21 +7,35 @@
     background: var(--background-color);
 
     .container {
-        padding: 4rem 0;
+        padding: 1rem 0;
+
+        @include bp(mobile) {
+            display: block;
+        }
+
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin: 0 auto;
 
         .map-responsive {
-            margin-right: 2rem;
-            flex: 0 1 40%;
+            margin: 3rem;
+            flex: 1 1 40%;
             z-index: 1;
             padding-right: 2rem;
         }
     }
 
+    .contact-info {
+        @include bp(mobile) {
+            margin-left: 3rem;
+        }
+    }
+
     .contact-form {
+
+        margin-right: 3rem;
+
         .feedback-input {
             color: var(--text-color);
             font-family: var(--font-ptsans);
