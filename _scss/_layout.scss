@@ -1,6 +1,7 @@
 .site {
     position: relative;
     min-height: 100vh;
+    background: var(--background-color);
 
     .site-header {
         @include bp(desktop) {
