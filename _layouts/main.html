@@ -12,7 +12,6 @@
     </script>
     <script src="https://kit.fontawesome.com/445cda2d9c.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
-
     <title>
         {% if page.title != 'Home' %}
         {{ page.title }} | {{ site.title }}
@@ -31,25 +30,11 @@
         <main class="site-main">
             {{ content }}
         </main>
-
         <footer class="site-footer">
-            <p>{{ site.title }} &copy; All rights reserved</p>
-
-            <p>
-                You can call us anytime and reserve a spot at: 0887643110
-            </p>
-            <section id="footer_info">
-                <span>Mon-Fri: 8AM - 6PM</span>
-                <i class="fab fa-facebook-square fa-2x"></i>
-                <i class="fab fa-instagram fa-2x"></i>
-                <i class="fab fa-twitter fa-2x"></i>
-                <i class="fab fa-pinterest fa-2x"></i>
-            </section>
+            {% include footer.html %}
 
         </footer>
-
     </div>
-
 </body>
 
 </html>

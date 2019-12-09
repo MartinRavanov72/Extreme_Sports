@@ -57,8 +57,17 @@
                     padding-top: 50%;
                 }
             }
-        }
 
+            img {
+                display: block;
+                position: absolute;
+                width: auto;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
 
         li:hover {
             @include bp(mobile) {
@@ -66,40 +75,7 @@
             }
 
             transform: scale(1.1);
-            z-index: 4;
-        }
-
-        a {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            &:before {
-                display: block;
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 5;
-                // background: rgba(black, 0.5);
-                box-shadow: 0 0 0 0.5em white inset;
-            }
-        }
-
-        img {
-            display: block;
-            position: absolute;
-            width: auto;
-            height: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            z-index: 2;
         }
     }
-
 }

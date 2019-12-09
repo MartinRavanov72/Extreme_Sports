@@ -3,7 +3,7 @@
     margin: 0 auto;
 
     h2 {
-        padding: 1.3rem 0;
+        padding: 1.5rem 0 1.2rem 0;
         text-align: center;
     }
 
@@ -16,36 +16,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            border: 2px solid rgb(156, 149, 149);
-            border-radius: 0.3rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.5rem;
+            list-style: none;
+            margin-bottom: 4rem;
 
             .sport-info {
                 flex: 1 1 70%;
             }
 
-            h2,
-            p {
+            .sport-info h2,
+            .sport-info p {
                 margin: 0 auto;
                 text-align: center;
                 width: 60%;
             }
 
-            p {
+            .sport-info p {
                 font-size: 1.1rem;
             }
 
-
-            list-style: none;
-            margin-bottom: 4rem;
-
-
-
             .img-container {
-                @include bp(tablet) {
-                    margin: 2rem auto;
-                }
-
                 transition: transform;
                 transition-duration: 1s;
                 transition-timing-function: cubic-bezier(0.2, 0.3, 0, 1);
@@ -55,15 +46,7 @@
                 height: 20rem;
                 width: 20rem;
                 margin: 2rem;
-            }
 
-            .left {
-                @include bp(tablet) {
-                    margin: 0 auto;
-                }
-            }
-
-            .right {
                 @include bp(tablet) {
                     margin: 2rem auto;
                 }
@@ -102,7 +85,6 @@
                 background: url("../pics/rafting.jpg");
                 background-size: cover;
             }
-
         }
     }
 }

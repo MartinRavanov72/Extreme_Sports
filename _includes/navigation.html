@@ -1,16 +1,33 @@
 <label for="nav-toggle" class="nav-toggle-label">
     <i class="fas fa-times fa-3x"></i>
-    <i class="fas fa-bars fa-3x"></i></label>
+    <i class="fas fa-bars fa-3x"></i>
+</label>
 <nav class="site-nav">
     <ul>
         {% assign navigation_pages = site.pages | sort:"order" %}
-
         {% for current_page in navigation_pages %}
         {% if current_page.title %}
-
         <li
             class="page-title--{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
-            <a href="{{ site.baseurl }}{{current_page.url }}">{{ current_page.title }}</a>
+
+            <a href="{{ site.baseurl }}{{current_page.url }}">
+                {% if current_page.url == "/" %}
+                <i class="fas fa-home"></i>
+                {% endif %}
+
+                {% if current_page.url == "/about/" %}
+                <i class="fas fa-users"></i>
+                {% endif %}
+
+                {% if current_page.url == "/gallery/" %}
+                <i class="fas fa-image"></i>
+                {% endif %}
+
+                {% if current_page.url == "/contacts/" %}
+                <i class="fas fa-address-card"></i>
+                {% endif %}
+
+                {{ current_page.title }}</a>
         </li>
         {% endif %}
         {% endfor %}

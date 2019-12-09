@@ -1,22 +1,18 @@
-.site-header {
-    @include bp(desktop) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
 .site {
     position: relative;
     min-height: 100vh;
-    background: var(--background-color);
-}
 
-.site-main {
-    padding-bottom: 7rem;
-}
+    .site-header {
+        @include bp(desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 
-
-input:checked+.card .button .less {
-    display: inline;
+    .site-main {
+        color: var(--text-color);
+        background: var(--background-color);
+        padding-bottom: 7rem;
+    }
 }
